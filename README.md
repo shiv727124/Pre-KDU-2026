@@ -17,5 +17,5 @@ content_id | title                    | category_name
 2          | The Cosmic Heist         | Movies
 ...
 
-![image alt]([https://github.com/shiv727124/Pre-KDU-2026/blob/5d52d5616f8ae8020c36f8bd3e952d5ee1b399da/images/category%20table.png](https://github.com/shiv727124/Pre-KDU-2026/blob/5d52d5616f8ae8020c36f8bd3e952d5ee1b399da/images/Q1.jpeg))
+![image alt](https://github.com/shiv727124/Pre-KDU-2026/blob/5d52d5616f8ae8020c36f8bd3e952d5ee1b399da/images/Q1.jpeg)
 
