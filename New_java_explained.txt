@@ -1,0 +1,50 @@
+Comparison: HashMap + Sorting vs. Normal Sorting in Terms of Time and Space
+
+1. HashMap for Counting + Sorting Unique Entries
+
+Steps: 1. Build frequency map: O(N) time, O(K) space 2. Convert map
+entries to list: O(K) time, O(K) space 3. Sort by values: O(K log K)
+time 4. Print results: O(K)
+
+Total Time Complexity: O(N) + O(K log K)
+
+Total Space Complexity: O(K)
+
+This is efficient when many elements repeat, meaning: K << N (K = unique
+items, N = total items)
+
+Why it’s faster: You only sort the unique items instead of the entire
+array.
+
+2. Normal Method: Sort the Array Directly
+
+Steps: 1. Sort the array: O(N log N) time 2. Count consecutive groups:
+O(N) time
+
+Total Time Complexity: O(N log N)
+
+Total Space Complexity: O(1) or O(log N)
+
+Why it’s slower: You sort every element, even repeated ones.
+
+3. Final Comparison
+
+  --------------------------------------------------------------------------
+  Method               Time Complexity Space        Best Use Case
+                                       Complexity   
+  -------------------- --------------- ------------ ------------------------
+  HashMap + Sort       O(N + K log K)  O(K)         When duplicates are many
+  Unique Items                                      (K << N)
+
+  Normal Sort Entire   O(N log N)      Low          When simplicity is
+  Array                                             preferred
+  --------------------------------------------------------------------------
+
+4. Conclusion
+
+(HashMap + sorting unique items): - Faster in most real
+scenarios - Uses more space, but efficiently reduces sorting work -
+Ideal when the input contains many duplicates
+
+The normal sorting method: - Simpler but slower for large datasets -
+Always sorts all N items, even repeated ones
