@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Pomodoro Timer</title>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Pomodoro</h1>
+    <div class="mode" id="modeText">Work Session</div>
+
+    <div class="progress-container">
+        <svg width="200" height="200">
+            <circle class="circle-bg" cx="100" cy="100" r="90"></circle>
+            <circle class="circle-progress" cx="100" cy="100" r="90"></circle>
+        </svg>
+        <div class="time" id="timeDisplay">25:00</div>
+    </div>
+
+    <div class="controls">
+        <button class="btn-start" id="startBtn">Start</button>
+        <button class="btn-pause" id="pauseBtn">Pause</button>
+        <button class="btn-reset" id="resetBtn">Reset</button>
+    </div>
+
+    <button class="btn-toggle" id="darkToggle">🌙 Dark Mode</button>
+
+    <div class="custom">
+        <input type="number" id="customMinutes" placeholder="Minutes (1–60)">
+        <br>
+        <button id="setCustomBtn">Set Timer</button>
+    </div>
+
+    <div class="sessions">
+        Sessions Completed: <span id="sessionCount">0</span>
+    </div>
+</div>
+
+<audio id="alertSound">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg">
+</audio>
+
+<!-- Link external JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
