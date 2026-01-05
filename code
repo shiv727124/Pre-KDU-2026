@@ -1,0 +1,38 @@
+
+Request A (Category Audit): "Get a list of all content titles that belong to the 'Documentaries' 
+category, was released in 2024 and has a rating higher than 8.0. We need the Title and the 
+Category Name in the final report." 
+
+
+
+SELECT 
+    c.title AS "Content Title",
+    cat.category_name AS "Category"
+FROM content c
+INNER JOIN category cat ON c.category_id = cat.category_id
+WHERE cat.category_name = 'Documentaries'
+  AND c.release_year = 2024
+  AND c.rating > 8.0
+ORDER BY c.title;
+
+
+
+
+
+Request B (Success Score Analysis): "We don't just want to know Views or Ratings 
+separately. We need a combined 'Success Score' for our dashboard." 
+● Write a query that returns the Title and a new column named success_score. 
+○ success_score = rating + views_in_millions 
+● Only show results where this calculated success_score is greater than 100.
+
+
+SELECT 
+    c.title AS "Content Title",
+    cat.category_name AS "Category",
+    c.rating AS "Rating",
+    c.views_in_millions AS "Views (millions)",
+    (c.rating + c.views_in_millions) AS "Success Score"
+FROM content c
+INNER JOIN category cat ON c.category_id = cat.category_id
+WHERE (c.rating + c.views_in_millions) > 100
+ORDER BY "Success Score" DESC;
